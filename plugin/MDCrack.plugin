@@ -4,7 +4,7 @@
 #!author=@ddgksf2013
 #!icon=https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/e2/31/58/e231587c-3055-4c93-b3c4-7b0393f4af77/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1024x0w.png
 
-[Rewrite]
+[Script]
 
 # ～ 谜底黑胶☆解锁会员权限（2022-12-28）@ddgksf2013
 http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path=https://github.com/ddgksf2013/dev/raw/main/MDVinylProCrack.js, requires-body=true, timeout=10, enabled=true, tag=MDVinylProCrack
