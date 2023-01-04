@@ -1,0 +1,31 @@
+#!name=amap
+#!desc=高德地图优化@Cuttlefish
+#!icon=
+#!author=@Cuttlefish
+
+[Rule]
+host, amdc.m.taobao.com, reject
+host, page.amap.com, reject
+host, www.qchannel01.cn, reject
+
+[Rewrite]
+^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution reject
+^https?:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend reject-dict
+^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/\w+\.gif reject-img
+
+
+[Script]
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1, script-path=https://raw.githubusercontent.com/deezertidal/private/main/jdprice.js,tag=京东比价
+# ～ 高德地图☆净化（2023-01-04）@ddgksf2013
+
+
+http-response ^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js, requires-body=1, timeout=10, enabled=false, tag=高德地图优化
+http-response ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js, requires-body=1, timeout=10, enabled=false, tag=高德地图优化
+
+http-response ^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js, requires-body=1, timeout=10, enabled=false, tag=高德地图优化
+http-response ^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js, requires-body=1, timeout=10, enabled=false, tag=高德地图优化
+http-response ^https?:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword script-path=https://github.com/ddgksf2013/Scripts/raw/master/amap.js, requires-body=1, timeout=10, enabled=false, tag=高德地图优化
+
+
+[MITM]
+hostname = optimus-ads.amap.com, m5.amap.com, sns.amap.com
