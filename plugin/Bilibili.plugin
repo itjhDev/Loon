@@ -1,8 +1,8 @@
 #!name=B站去广告+1080P高码率@ddgksf2013
 #!desc=
-#!homepage=
+#!homepage=https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 #!author=@ddgksf2013, @blackmatrix7, @app2smile, @yjqiang
-#!icon=
+#!icon=https://github.com/Koolson/Qure/blob/master/IconSet/Color/bilibili.png?raw=true
 
 [Rewrite]
 
